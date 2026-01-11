@@ -119,7 +119,7 @@ export async function addExerciseToRoutineHandler(
 
     const existingDays = daysResponse.results
       .map((d) => DaySchema.parse(d))
-      .filter(d => d.routine === routineId);
+      .filter((d) => d.routine === routineId);
     const existingDay = existingDays.find((d) => d.name === dayNameToUse);
 
     if (existingDay) {
