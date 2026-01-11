@@ -40,6 +40,7 @@ import {
   updateExerciseInRoutineTool,
   updateExerciseInRoutineHandler,
 } from './tools/update-exercise';
+import { deleteSlotTool, deleteSlotHandler } from './tools/delete-slot';
 
 // Import diagnostic tool
 import { diagnoseTool, diagnoseHandler } from './tools/diagnose';
@@ -219,6 +220,7 @@ export function createServer(): WgerMCPServer {
   server.registerTool(updateDayTool, updateDayHandler);
   server.registerTool(deleteDayTool, deleteDayHandler);
   server.registerTool(updateExerciseInRoutineTool, updateExerciseInRoutineHandler);
+  server.registerTool(deleteSlotTool, deleteSlotHandler);
 
   // Register diagnostic tool
   server.registerTool(diagnoseTool, diagnoseHandler);
